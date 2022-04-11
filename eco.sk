@@ -1,6 +1,6 @@
-#            [        ]            #
-#------------|  Gold  |------------#
-#            [        ]            #
+#            [                            ]            #
+#------------|  Erlingx - Economie (Gold) |------------#
+#            [                            ]            #
 on join:
     send "&7Tu as actuelement &6%{gold.%uuid of player%}% Or !" to player
 
@@ -22,13 +22,12 @@ command /orclear <int> [<player>]:
 				send "&7Vous avez perdu &6%arg-1% Or ! &7Il vous reste donc &6%{gold.%uuid of player%}% Or !" to player
 
 command /balor <player>:
-		permission: admin.skript
+		permission: moderator.skript
 		trigger:
 				send "&7Le joueur %arg-1% à &6%{gold.%uuid of player%}% Or !"
 
-command /or:
-		trigger:
-				send "&7Vous avez &6%{gold.%uuid of player%}% Or !"
+on right click with 266:
+		send "&7Le joueur %arg-1% à &6%{gold.%uuid of player%}% Or !"
 
 #            [        ]            #
 #------------|  Shop  |------------#
