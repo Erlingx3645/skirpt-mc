@@ -1,0 +1,35 @@
+#            [        ]            #
+#------------|  Gold  |------------#
+#            [        ]            #
+on join:
+    send "&7Tu as actuelement &6%{gold.%uuid of player%}% Or !" to player
+
+on death:
+	if attacker is a player:
+		add 10 to {gold.%uuid of attacker%}
+		send "&7Tu as gagné &610 Or &7(&f%{gold.%uuid of attacker%}%&7)" to attacker
+
+command /oradd <int> <player>:
+		permission: admin.skript
+		trigger:
+				add arg-1 to {gold.%uuid of player%}
+				send "&7Vous avez reçu &6%arg-1% Or ! &7Vous avez donc &6%{gold.%uuid of player%}% Or !" to player
+
+command /orclear <int> [<player>]:
+		permission: admin.skript
+		trigger:
+				remove arg 1 from {gold.%uuid of player%}
+				send "&7Vous avez perdu &6%arg-1% Or ! &7Il vous reste donc &6%{gold.%uuid of player%}% Or !" to player
+
+command /balor <player>:
+		permission: admin.skript
+		trigger:
+				send "&7Le joueur %arg-1% à &6%{gold.%uuid of player%}% Or !"
+
+command /or:
+		trigger:
+				send "&7Vous avez &6%{gold.%uuid of player%}% Or !"
+
+#            [        ]            #
+#------------|  Shop  |------------#
+#            [        ]            #
