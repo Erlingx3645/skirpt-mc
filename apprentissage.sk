@@ -1,7 +1,6 @@
 #            [                           ]            #
 #------------|  Erlingx - Apprentissage  |------------#
 #            [                           ]            #
-
 #GUI - Souffles
 command /§app-tech-all <player>:
 	trigger:
@@ -137,43 +136,36 @@ command /learn <player>:
 		    set the slot 0 of the player's current inventory to a 9404 named "Apprendre"
 		    set the slot 1 of the player's current inventory to a 340 named "Liste"
 
-on inventory click:
-	if the name of the clicked inventory is "[Apprentissage Technique]":
-	cancel event
-		if the clicked slot is a 9404:
-			close the player's inventory
-			make player execute "/§app-tech-all %arg-1%"
-
 #apprentissage
 on inventory click:
-	if the name of clicked inventory is "Techniques"
+	if the name of clicked inventory is "Techniques":
 	cancel event
-		if clicked slot is 160:4
+	if clicked slot is 160:4:
 		close the player's inventory
 		make player execute "/§app-tech-fo %arg-1%"
 		#
-		if clicked slot is 160:14
+	if clicked slot is 160:14:
 		close the player's inventory
 		make player execute "/§app-tech-fl %arg-1%"
 		#
-		if clicked slot is 160:10
+	if clicked slot is 160:10:
 		close the player's inventory
 		make player execute "/§app-tech-ve %arg-1%"
 		#
-		if clicked slot is 160:3
+	if clicked slot is 160:3:
 		close the player's inventory
 		make player execute "/§app-tech-ea %arg-1%"
-		if the name of clicked inventory is "Techniques"
+	if the name of clicked inventory is "Techniques"
 		#
-		if clicked slot is 160:2
+	if clicked slot is 160:2:
 		close the player's inventory
 		make player execute "/§app-tech-so %arg-1%"
 		#
-		if clicked slot is 160:8
+	if clicked slot is 160:8:
 		close the player's inventory
 		make player execute "/§app-tech-lu %arg-1%"
 		#
-		if clicked slot is 160:1
+	if clicked slot is 160:1:
 		close the player's inventory
 		make player execute "/§app-tech-sa %arg-1%"
 		#
@@ -182,290 +174,291 @@ on inventory click:
 on inventory click:
 	if the name of clicked inventory is "[&eSouffle de la foudre]"
 	cancel event
-		if clicked slot is 453
-		close the player's inventory
-		send "&cIndisponible" to player
+	if clicked slot is 453:
+	close the player's inventory
+	send "&cIndisponible" to player
         #liste
-		if clicked slot is 160:14 named "&eFrappe Foudroyante"
+	if clicked slot is 160:14 named "&eFrappe Foudroyante":
 		close the player's inventory
 		make player execute "/cast teach %arg-1% Frappe Foudroyante"
         #t-1
-		if clicked slot is 160:14 named "&eFrappe Foudroyante - Six Coups"
-		close th player's inventory
+	if clicked slot is 160:14 named "&eFrappe Foudroyante - Six Coups":
+		close the player's inventory
 		make the player's execute "/cast teach %arg-1% Frappe Foudroyante - Six Coups"
         #t-2
-		if clicked slot is 160:14 named "&eFrappe Foudroyante - Huit Coups"
-		close th player's inventory
+	if clicked slot is 160:14 named "&eFrappe Foudroyante - Huit Coups":
+		close the player's inventory
 		make the player's execute "/cast teach %arg-1% Frappe Foudroyante - Huit Coups"
         #t-3
-		if clicked slot is 160:14 named "&eFrappe Foudroyante - Vitesse Divine"
-		close th player's inventory
+	if clicked slot is 160:14 named "&eFrappe Foudroyante - Vitesse Divine":
+		close the player's inventory
 		make the player's execute "/cast teach %arg-1% Frappe Foudroyante - Vitesse Divine"
         #t-4
-		if clicked slot is 160:14 named "&eBouillonnement des nuages"
-		close th player's inventory
+	if clicked slot is 160:14 named "&eBouillonnement des nuages":
+		close the player's inventory
 		make the player's execute "/cast teach %arg-1% Bouillonnement des nuages"
         #t-5
-		if clicked slot is 160:14 named "&eNuée d'Éclairs"
-		close th player's inventory
+	if clicked slot is 160:14 named "&eNuée d'Éclairs":
+		close the player's inventory
 		make the player's execute "/cast teach %arg-1% Nuée d'Éclairs"
         #t-6
-		if clicked slot is 160:14 named "&eOrage Lointain"
-		close th player's inventory
+	if clicked slot is 160:14 named "&eOrage Lointain":
+		close the player's inventory
 		make the player's execute "/cast teach %arg-1% Orage Lointain"
         #t-7
-		if clicked slot is 160:14 named "&eÉclair de Chaleur"
-		close th player's inventory
+	if clicked slot is 160:14 named "&eÉclair de Chaleur":
+		close the player's inventory
 		make the player's execute "/cast teach %arg-1% Éclair de Chaleur"
         #t-8
-		if clicked slot is 160:14 named "&eTonnerre et Foudre"
-		close th player's inventory
+	if clicked slot is 160:14 named "&eTonnerre et Foudre":
+		close the player's inventory
 		make the player's execute "/cast teach %arg-1% Tonnerre et Foudre"
         #t-9
-        if clicked slot is 160:14 named "&e&lDieu du Feu Céleste"
-		close th player's inventory
+	if clicked slot is 160:14 named "&e&lDieu du Feu Céleste":
+		close the player's inventory
 		make the player's execute "/cast teach %arg-1% Dieu du Feu Céleste"
         #t-u
 
 #Souffle de la Flamme
 on inventory click:
-	if the name of clicked inventory is "[&cSouffle de la flamme]"
-		cancel event
-			if clicked slot is 453
-			close the player's inventory
-			send "&cIndisponible" to player
+	if the name of clicked inventory is "[&cSouffle de la flamme]":
+	cancel event
+	if clicked slot is 453:
+		close the player's inventory
+		send "&cIndisponible" to player
         	#liste
-			if clicked slot is 160:4 named "&cMer de Flammes"
-			close the player's inventory
-			make player execute "/cast teach %arg-1% Mer de Flammes"
+	if clicked slot is 160:4 named "&cMer de Flammes":
+		close the player's inventory
+		make player execute "/cast teach %arg-1% Mer de Flammes":
     		#t-1
-			if clicked slot is 160:4 named "&cMer de Flammes - Vitesse Divine"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Mer de Flammes - Vitesse Divine"
+	if clicked slot is 160:4 named "&cMer de Flammes - Vitesse Divine":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Mer de Flammes - Vitesse Divine"
         	#t-2
-			if clicked slot is 160:4 named "&cFlammes du Soleil Ascendant"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Flammes du Soleil Ascendant"
+	if clicked slot is 160:4 named "&cFlammes du Soleil Ascendant":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Flammes du Soleil Ascendant"
         	#t-3
-			if clicked slot is 160:4 named "&cUnivers de Flammes"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Univers de Flammes"
+	if clicked slot is 160:4 named "&cUnivers de Flammes":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Univers de Flammes"
         	#t-4
-			if clicked slot is 160:4 named "&ca Vague Flamboyante"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% La Vague Flamboyante"
+	if clicked slot is 160:4 named "&ca Vague Flamboyante":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% La Vague Flamboyante"
         	#t-5
-			if clicked slot is 160:4 named "&cTigre de Flammes"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Tigre de Flammes"
+	if clicked slot is 160:4 named "&cTigre de Flammes":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Tigre de Flammes"
 			#t-6
-			if clicked slot is 160:4 named "&cTigre de Flammes - Six Coups"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Tigre de Flammes - Six Coups"
+	if clicked slot is 160:4 named "&cTigre de Flammes - Six Coups":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Tigre de Flammes - Six Coups"
 			#t-7
-			if clicked slot is 160:4 named "&cTigre de Flammes - Huit Coups"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Tigre de Flammes - Huit Coups"
+	if clicked slot is 160:4 named "&cTigre de Flammes - Huit Coups":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Tigre de Flammes - Huit Coups"
 			#t-8
-			if clicked slot is 160:4 named "&cTigre de Flammes - Dix Coups"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Tigre de Flammes - Dix Coups"
+	if clicked slot is 160:4 named "&cTigre de Flammes - Dix Coups":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Tigre de Flammes - Dix Coups"
 			#t-9
-			if clicked slot is 160:4 named "&c&lPurgatoire"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Purgatoire"
+	if clicked slot is 160:4 named "&c&lPurgatoire":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Purgatoire"
 			#t-u
 
 
 #Souffle du vent
 on inventory click:
-	if the name of clicked inventory is "[&3Souffle du vent]"
-		cancel event
-			if clicked slot is 453
-			close the player's inventory
-			send "&cIndisponible" to player
+	if the name of clicked inventory is "[&3Souffle du vent]":
+	cancel event
+	if clicked slot is 453
+		close the player's inventory
+		send "&cIndisponible" to player
         	#liste
-			if clicked slot is 160:10 named "&3Tourbillon de Poussière - Tranche"
-			close the player's inventory
-			make player execute "/cast teach %arg-1% Tourbillon de Poussière - Tranche"
+	if clicked slot is 160:10 named "&3Tourbillon de Poussière - Tranche":
+		close the player's inventory
+		make player execute "/cast teach %arg-1% Tourbillon de Poussière - Tranche"
     		#t-1
-			if clicked slot is 160:10 named "&3Griffes de Vent Purificatrices"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Griffes de Vent Purificatrices"
+	if clicked slot is 160:10 named "&3Griffes de Vent Purificatrices":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Griffes de Vent Purificatrices"
         	#t-2
-			if clicked slot is 160:10 named "&3Arbre Ondulant dans la Brise Montagnarde"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Arbre Ondulant dans la Brise Montagnarde"
+	if clicked slot is 160:10 named "&3Arbre Ondulant dans la Brise Montagnarde":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Arbre Ondulant dans la Brise Montagnarde"
         	#t-3
-			if clicked slot is 160:10 named "&3La Tempête de Poussière"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% La Tempête de Poussière"
+	if clicked slot is 160:10 named "&3La Tempête de Poussière":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% La Tempête de Poussière"
         	#t-4
-			if clicked slot is 160:10 named "&3Tempête Hivernale"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Tempête Hivernale"
+	if clicked slot is 160:10 named "&3Tempête Hivernale":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Tempête Hivernale"
         	#t-5
-			if clicked slot is 160:10 named "&3Tempête Hivernale - Six Coups"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Tempête Hivernale - Six Coups"
+	if clicked slot is 160:10 named "&3Tempête Hivernale - Six Coups":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Tempête Hivernale - Six Coups"
 			#t-6
-			if clicked slot is 160:10 named "&3La Rafale de Fumée Noire"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% La Rafale de Fumée Noire"
+	if clicked slot is 160:10 named "&3La Rafale de Fumée Noire":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% La Rafale de Fumée Noire"
 			#t-7
-			if clicked slot is 160:10 named "&3Vent Puissant - Bourrasque de Tengu"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Vent Puissant - Bourrasque de Tengu"
+	if clicked slot is 160:10 named "&3Vent Puissant - Bourrasque de Tengu":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Vent Puissant - Bourrasque de Tengu"
 			#t-8
-			if clicked slot is 160:10 named "&3Frappe de la Première Bourrasque"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Frappe de la Première Bourrasque"
+	if clicked slot is 160:10 named "&3Frappe de la Première Bourrasque":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Frappe de la Première Bourrasque"
 			#t-9
-			if clicked slot is 160:10 named "&3&lTyphon de Skanda"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Typhon de Skanda"
+	if clicked slot is 160:10 named "&3&lTyphon de Skanda":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Typhon de Skanda"
 			#t-u
 
 #Souffle du son
 on inventory click:
 	if the name of clicked inventory is "[&dSouffle du son]"
-		cancel event
-			if clicked slot is 453
-			close the player's inventory
-			send "&cIndisponible" to player
+	cancel event
+	if clicked slot is 453:
+		close the player's inventory
+		send "&cIndisponible" to player
         	#liste
-			if clicked slot is 160:2 named "&dTonnerre"
-			close the player's inventory
-			make player execute "/cast teach %arg-1% dTonnerre"
+	if clicked slot is 160:2 named "&dTonnerre":
+		close the player's inventory
+		make player execute "/cast teach %arg-1% Tonnerre"
     		#t-1
-			if clicked slot is 160:2 named "&dLe Glas Mortel d'Avici"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Le Glas Mortel d'Avici"
+	if clicked slot is 160:2 named "&dLe Glas Mortel d'Avici":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Le Glas Mortel d'Avici"
         	#t-2
-			if clicked slot is 160:2 named "&d"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:2 named "&d":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% "
         	#t-3
-			if clicked slot is 160:2 named "&d"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:2 named "&d":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% "
         	#t-4
-			if clicked slot is 160:2 named "&d"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:2 named "&d":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% "
         	#t-5
-			if clicked slot is 160:2 named "&d"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:2 named "&d":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% "
 			#t-6
-			if clicked slot is 160:2 named "&d
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:2 named "&d":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% "
 			#t-7
-			if clicked slot is 160:2 named "&d
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:2 named "&d":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% "
 			#t-8
-			if clicked slot is 160:2 named "&d"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:2 named "&d":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% "
 			#t-9
-			if clicked slot is 160:2 named "&d&lSymphonie Stridente"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Symphonie Stridente"
+	if clicked slot is 160:2 named "&d&lSymphonie Stridente":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Symphonie Stridente"
 			#t-u
 
 #Souffle de la Lune
 on inventory click:
-	if the name of clicked inventory is "[&7Souffle de la lune]"
-		cancel event
-			if clicked slot is 453
-			close the player's inventory
-			send "&cIndisponible" to player
+	if the name of clicked inventory is "[&7Souffle de la lune]":
+	cancel event
+	if clicked slot is 453:
+		close the player's inventory
+		send "&cIndisponible" to player
         	#liste
-			if clicked slot is 160:2 named "&7Lune Sombre - Sanctuaire Nocturne"
-			close the player's inventory
-			make player execute "/cast teach %arg-1% Lune Sombre - Sanctuaire Nocturne"
+	if clicked slot is 160:2 named "&7Lune Sombre - Sanctuaire Nocturne":
+		close the player's inventory
+		make player execute "/cast teach %arg-1% Lune Sombre - Sanctuaire Nocturne"
     		#t-1
-			if clicked slot is 160:2 named "&7Fleur de Nacre au Clair de Lune"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Fleur de Nacre au Clair de Lune"
+	if clicked slot is 160:2 named "&7Fleur de Nacre au Clair de Lune":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Fleur de Nacre au Clair de Lune"
         	#t-2
-			if clicked slot is 160:2 named "&7La Lune Meurtrière de l'Abandon - Chaîne"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% La Lune Meurtrière de l'Abandon - Chaîne"
+	if clicked slot is 160:2 named "&7La Lune Meurtrière de l'Abandon - Chaîne":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% La Lune Meurtrière de l'Abandon - Chaîne"
         	#t-3
-			if clicked slot is 160:2 named "&7Vortex Maudit de la Lune Spectrale"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Vortex Maudit de la Lune Spectrale"
+	if clicked slot is 160:2 named "&7Vortex Maudit de la Lune Spectrale":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Vortex Maudit de la Lune Spectrale"
         	#t-4
-			if clicked slot is 160:2 named "&7La Lune Solitaire dans l'Obscurité Éternelle - L'Avici"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% La Lune Solitaire dans l'Obscurité Éternelle - L'Avici"
+	if clicked slot is 160:2 named "&7La Lune Solitaire dans l'Obscurité Éternelle - L'Avici"
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% La Lune Solitaire dans l'Obscurité Éternelle - L'Avici"
         	#t-5
-			if clicked slot is 160:2 named "&7Miroir du Malheur - Reflet de la Lune"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Miroir du Malheur - Reflet de la Lune"
+	if clicked slot is 160:2 named "&7Miroir du Malheur - Reflet de la Lune":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Miroir du Malheur - Reflet de la Lune"
 			#t-6
-			if clicked slot is 160:2 named "&7Ouroboros Lunaire"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Ouroboros Lunaire"
+	if clicked slot is 160:2 named "&7Ouroboros Lunaire":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Ouroboros Lunaire"
 			#t-7
-			if clicked slot is 160:2 named "&7Lune Décroissante - Le Cycle Perpétuel"
-			make the player's execute "/cast teach %arg-1% Lune Décroissante - Le Cycle Perpétuel"
+	if clicked slot is 160:2 named "&7Lune Décroissante - Le Cycle Perpétuel":
+		make the player's execute "/cast teach %arg-1% Lune Décroissante - Le Cycle Perpétuel"
 			#t-8
-			if clicked slot is 160:2 named "&7Transperçant - La Lune de Lierre"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Transperçant - La Lune de Lierre"
+	if clicked slot is 160:2 named "&7Transperçant - La Lune de Lierre":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Transperçant - La Lune de Lierre"
 			#t-9
-			if clicked slot is 160:2 named "&7&lArc-en-Ciel Lunaire - Fragments Sélénites"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Arc-en-Ciel Lunaire - Fragments Sélénites"
+	if clicked slot is 160:2 named "&7&lArc-en-Ciel Lunaire - Fragments Sélénites":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Arc-en-Ciel Lunaire - Fragments Sélénites"
 			#t-u
 
 #Souffle du sable
 on inventory click:
-	if the name of clicked inventory is "[&6Souffle du sable]"
-		cancel event
-			if clicked slot is 453
-			close the player's inventory
-			send "&cIndisponible" to player
+	if the name of clicked inventory is "[&6Souffle du sable]":
+	cancel event
+	if clicked slot is 453:
+		close the player's inventory
+		send "&cIndisponible" to player
         	#liste
-			if clicked slot is 160:1 named "&6Saut sableux"
-			close the player's inventory
-			make player execute "/cast teach %arg-1% Saut sableux"
+	if clicked slot is 160:1 named "&6Saut sableux":
+		close the player's inventory
+		make player execute "/cast teach %arg-1% Saut sableux"
     		#t-1
-			if clicked slot is 160:1 named "&6Smash de sable"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Smash de sable"
+	if clicked slot is 160:1 named "&6Smash de sable":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Smash de sable"
         	#t-2
-			if clicked slot is 160:1 named "&6Prison de sable"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:1 named "&6Prison de sable":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% "
         	#t-3
-			if clicked slot is 160:1 named "&6Ejection de sable"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Ejection de sable"
+	if clicked slot is 160:1 named "&6Ejection de sable":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Ejection de sable"
         	#t-4
-			if clicked slot is 160:1 named "&6Filament de sable"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Filament de sable"
+	if clicked slot is 160:1 named "&6Filament de sable":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Filament de sable"
         	#t-5
-			if clicked slot is 160:1 named "&6Tempête de sable"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Tempête de sable"
+	if clicked slot is 160:1 named "&6Tempête de sable":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Tempête de sable"
 			#t-6
-			if clicked slot is 160:1 named "&6"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:1 named "&6":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% "
 			#t-7
-			if clicked slot is 160:1 named "&6"
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:1 named "&6":
+		make the player's execute "/cast teach %arg-1% "
 			#t-8
-			if clicked slot is 160:1 named "&6"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% "
+	if clicked slot is 160:1 named "&6":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% "
 			#t-9
-			if clicked slot is 160:1 named "&6&lLimon infernal - Coulé Suprême"
-			close th player's inventory
-			make the player's execute "/cast teach %arg-1% Limon infernal - Coulé Suprême"
+	if clicked slot is 160:1 named "&6&lLimon infernal - Coulé Suprême":
+		close the player's inventory
+		make the player's execute "/cast teach %arg-1% Limon infernal - Coulé Suprême"
 			#t-u
