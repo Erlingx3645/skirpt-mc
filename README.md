@@ -1,4 +1,3 @@
 # Skirpt-MC • Erlingx
 
-**__Version :  2.2-dev37c 
-__**
+**Version :  2.2-dev37c**
